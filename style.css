@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'FunkySmile';
-    src: url('FunkySmile-Regular.otf') format('truetype')
+    src: url('FunkySmile-Regular.otf') format('truetype');
 }
 
 @keyframes fadeIn {
     from { opacity: 0.1; }
     to   { opacity: 1; }
-  }
+}
 
 body {
     font-family: 'FunkySmile', sans-serif;
-    margin: 0vw;
+    margin: 0;
 }
 
 header {
@@ -19,7 +19,7 @@ header {
     padding-bottom: 2vw;
     position: relative;
     display: flex;
-    align-items: center; /* Center align items vertically */
+    align-items: center;
     justify-content: center;
     height: 14vw;
 }
@@ -31,87 +31,69 @@ header {
     animation: fadeIn 0.7s ease-in;
 }
 
-#why {
+#why, #story, #price {
     animation: fadeIn 1.5s ease-in;
     font-size: 2.8vw;
-    background-color: #ffffff;
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center align items vertically */
+    align-items: center;
     justify-content: center;
-    color : #0f396e;
-    padding-bottom : 8vw;
+    padding-bottom: 8vw;
 }
 
-#text_why {
-    color : #0f396e;
-}
-
-#info_why {
-    margin : 1vw;
-}
-
-#text_best {
-    padding-top: 5vw
+#why {
+    background-color: #ffffff;
+    color: #0f396e;
+    text-align: center;
 }
 
 #story {
-    animation: fadeIn 1.5s ease-in;
-    font-size: 2.8vw;
-    background-color : #0f396e;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align items vertically */
-    justify-content: center;
+    background-color: #0f396e;
+    margin : 0vw;
+}
+
+#price {
+    background-color: #80dfff;
+    padding-top: 2vw;
+}
+
+#text_why, #text_price {
+    color: #0f396e;
 }
 
 #text_story {
     color: white;
 }
 
+#info_why, #info_price, #info_story{
+    margin: 1vw;
+    text-align: center;
+}
+
 #info_story {
-    color :  #80dfff;
-    padding-bottom: 0.8w;
+    color: #80dfff;
 }
 
-#price{
-    animation: fadeIn 1.5s ease-in;
-    font-size: 2.8vw;
-    background-color: #80dfff;
-    padding-top: 2vw;
-    padding-bottom: 2vw;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align items vertically */
-    justify-content: center;
-    padding-bottom : 8vw;
+#text_best {
+    padding-top: 5vw;
 }
 
-#text_price{
-    color : #0f396e;
-    padding-bottom : 2vw;
-}
-#info_price {
-    color : #0f396e;
-    margin : 1vw;
-}
 footer {
     animation: fadeIn 1.5s ease-in;
     font-size: 2.5vw;
-    background-color : white;
-    color : #0f396e;
+    background-color: white;
+    color: #0f396e;
     height: 28vw;
     position: relative;
 }
 
 .no-underline {
-    text-decoration: none; /* Removes the underline */
-    color: inherit; /* Inherits the color from the parent element */
+    text-decoration: none;
+    color: inherit;
 }
 
+/* Footer contact layout (desktop) */
 #info {
     position: absolute;
     left: 46%;
@@ -119,19 +101,55 @@ footer {
 
 #email {
     position: absolute;
-    left : 7vw;
-    top : 16vw
+    left: 7vw;
+    top: 16vw;
 }
 
 #cell {
     position: absolute;
-    left : 7vw;   
-    top : 10vw 
+    left: 7vw;
+    top: 10vw;
 }
 
 #insta {
     position: absolute;
-    right : 7vw;   
-    top : 10vw     
+    right: 7vw;
+    top: 10vw;
 }
-  
+
+
+@media (max-width: 600px) {
+    header {
+        height: 24vw;
+    }
+
+    #logo {
+        left: 30%;
+        width: 50vw;
+    }
+
+    #why, #story, #price {
+        font-size: 4.5vw;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+
+    #info_why, #info_price, #info_story{
+        margin: 2vw;
+    }
+
+    footer {
+        font-size: 3.5vw;
+        height: auto;
+        padding: 6vw 4vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #info, #email, #cell, #insta {
+        position: static;
+        margin: 2vw 0;
+        text-align: center;
+    }
+}
