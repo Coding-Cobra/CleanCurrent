@@ -64,6 +64,7 @@ header {
 
 #text_story {
     color: white;
+    text-align: center;
 }
 
 #info_why, #info_price, #info_story{
@@ -73,10 +74,12 @@ header {
 
 #info_story {
     color: #80dfff;
+    text-align: center;
 }
 
 #text_best {
     padding-top: 5vw;
+    text-align: center;
 }
 
 footer {
